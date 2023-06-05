@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Passage from '@passageidentity/passage-node';
+
+const passage = new Passage({
+    appID: import.meta.env.PUBLIC_PASSAGE_APP_ID,
+    apiKey: import.meta.env.PASSAGE_API_KEY,
+});
+
+const { name: appName } = await passage.getApp();
+---
+
+<Layout title="Auth">
+	<main>
+		<h1>you need to login to {appName}</h1>
+    </main>
+</Layout>

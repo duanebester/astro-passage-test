@@ -1,9 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-if (!Astro.cookies.has('psg_auth_token')) {
-    return Astro.redirect('/auth')
-}
 ---
 
 <Layout title="Welcome to Astro.">
